@@ -1,6 +1,6 @@
 import "./App.css";
-import Private from "./components/auth/Private";
-import Profile from "./components/auth/Profile";
+
+import List from "./components/generics/List";
 
 function App() {
   // Object props passed to Person.tsx
@@ -11,21 +11,24 @@ function App() {
   // Array of Objects props passed to PersonList.tsx
   const personList = [
     {
+      id: 1,
       first: "Bruce",
       last: "Wayne",
     },
     {
+      id: 2,
       first: "Corry",
       last: "Wayne",
     },
     {
+      id: 3,
       first: "Filbert",
       last: "Wayne",
     },
   ];
   return (
     <div className="App">
-      <Private isLoggedIn={false} component={Profile} name="Filbert" />
+      <List name="Demo List" items={personList} />
     </div>
   );
 }
