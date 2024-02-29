@@ -1,22 +1,6 @@
 import "./App.css";
-import Button from "./components/Button";
-// Style Props
-import Container from "./components/Container";
-// useReducer
-import Counter from "./components/Counter";
-import Greet from "./components/Greet";
-import Heading from "./components/Heading";
-import Input from "./components/Input";
-// Children
-import Oscar from "./components/Oscar";
-import Person from "./components/Person";
-import PersonList from "./components/PersonList";
-import Status from "./components/Status";
 
-import Box from "./components/context/Box";
-import ThemeContextProvider from "./components/context/ThemeContext";
-import User from "./components/context/User";
-import UserContextProvider from "./components/context/UserContext";
+import MutableRef from "./components/ref/MutableRef";
 
 function App() {
   // Object props passed to Person.tsx
@@ -41,12 +25,7 @@ function App() {
   ];
   return (
     <div className="App">
-      <ThemeContextProvider>
-        <Box />
-      </ThemeContextProvider>
-      <UserContextProvider>
-        <User />
-      </UserContextProvider>
+      <MutableRef />
     </div>
   );
 }
